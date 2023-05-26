@@ -1,0 +1,17 @@
+<section>
+    <table class="table">
+        <tr class="table__header">
+            <th>Nome</th>
+            <th>Sobrenome</th>
+        </tr>
+        <tr *ngFor="let p of manyPeople" class="table__content">
+            <td>{{p.nome}}</td>
+            <td>{{p.sobrenome}}</td>
+        </tr>
+    </table>
+    <br>
+    <input class="input__name" placeholder="Nome" [(ngModel)]="person.nome" />
+    <input class="input__sobrenome" placeholder="Sobrenome" [(ngModel)]="person.sobrenome" />
+    <button class="btn__enviar" (click)="enviarPessoa()">Enviar</button>
+    <p>Número de pessoas: {{count}} </p>
+</section>
